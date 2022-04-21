@@ -1,14 +1,17 @@
-// modify this script to populate the month select you create in the HTML page from an array of month names
-// you can use either a for loop or an array.map to populate the select. remember that while arrays start with 
-// zero, month numbers go from 1-12
+document.getElementById('go').addEventListener('click', printCalendar);
+function printCalendar(){
+    var selectedYear = document.getElementById('year');
+    var selectedMonth = document.getElementById('month');
+   
+    selectedYear = parseInt(selectedYear.value);
+   
+    selectedMonth = parseInt(selectedMonth.value);
 
-// modify this script to run a function called printCalendar() when the user clicks the "Go" button
+const today = new Date(`${selectedMonth + 1}/1/${selectedYear}`);
 
-// modify this script to use the first day of the month the user selects in place of the const today 
+const month = today.getMonth();
 
-const today = new Date('5/1/2021')
-const month = today.getMonth()
-let days
+let days;
 switch (month) {
     case 1:
         days = 28
@@ -21,27 +24,40 @@ switch (month) {
         break
     default:
         days = 31
-}
-    
-let x
+};
+
+let calendarDays = document.getElementById('calendarDays');
+calendarDays.innerHTML = ' ';
+let x;
 const weekday = today.getDay()
+
 for (x = 0; x < weekday; x++){
-    document.getElementById('calendarDays').innerHTML += "<div class='blankDay'>&nbsp;</div>"
-}
+    calendarDays.innerHTML += "<div class='blankDay'>&nbsp;</div>";
+};
 
-let dt = 0
+let dt = 0;
 do {
-    dt++
-    document.getElementById('calendarDays').innerHTML += `<div class='calendarCell'>${dt}</div`
-} while ( dt < days)
+    dt++;
+    calendarDays.innerHTML += `<div class='calendarCell'>${dt}</div`;
+} while ( dt < days);
 
-const monthName = today.toLocaleDateString('default', {month:'long'})
-const year = today.getFullYear()
-document.querySelector('.calendarTitle').innerText = `${monthName} ${year}`
-
-const remainder = (7 - ((x + dt) % 7))
-let y = 0
+const monthName = today.toLocaleDateString('default', {month:'long'});
+const year = today.getFullYear();
+document.querySelector('.calendarTitle').innerText = `${monthName} ${year}`;
+const remainder = (7 - ((x + dt) % 7));
+let y = 0;
 while ( y < remainder) {
-    document.getElementById('calendarDays').innerHTML += "<div class='blankDay'>&nbsp;</div>"
-    y++
-}
+    calendarDays.innerHTML += "<div class='blankDay'>&nbsp;</div>";
+    y++;
+}; 
+};
+
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+let select = document.getElementById('month');
+for (let i = 0; i < months.length; i++){
+    let newOptions = document.createElement('option');
+    newOptions.innerHTML = months[i];
+    newOptions.setAttribute('value', months.indexOf(months[i]));
+    select.append(newOptions);
+};
+printCalendar();
