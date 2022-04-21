@@ -1,5 +1,5 @@
 .calendarWrapper {
-  border: silver 2px solid;
+  border: rgb(25, 162, 226) 2px solid;
   width: 525px;
   margin: 0 auto;
 }
@@ -9,7 +9,7 @@
   padding: 5px;
   font-weight: 700;
   grid-column: span 7;
-  border: silver 1px solid;
+  border: rgb(93, 243, 243) 1px solid;
 }
 
 .calendar {
@@ -18,14 +18,19 @@
 }
 
 .calendarCell {
-  border: silver 1px solid;
+  border: rgb(120, 179, 206) 1px solid;
   text-align: center;
   padding: 3px;
 }
 
 .blankDay {
-  border: silver 1px solid;
+  border: rgb(124, 178, 192) 1px solid;
   text-align: center;
   padding: 3px;
-  background-color: silver;
+  background-color: rgb(85, 129, 155);
+}
+
+.new {
+  text-align: center;
+  padding: 5px;
 }
