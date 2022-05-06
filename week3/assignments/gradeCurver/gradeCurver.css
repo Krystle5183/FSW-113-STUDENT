@@ -2,14 +2,14 @@
   margin: 0 auto;
   width: 300px;
   text-align: center;
-  border: 1px solid blue;
+  border: 1px solid rgb(21, 96, 109);
   border-radius: 12px;
   padding: 10px;
-  background-image: linear-gradient(darkblue, skyblue);
+  background-image: linear-gradient(rgb(49, 176, 170), rgb(21, 225, 222));
 }
 
 .gradeHeading {
-  color: white;
+  color: rgb(0, 8, 5);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: large;
   font-weight: 700;
@@ -20,7 +20,7 @@
   border: 0px;
   padding: 5px;
   border-radius: 3px;
-  background-color: skyblue;
+  background-color: rgb(20, 222, 151);
   margin-top: 25px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -30,7 +30,7 @@
   border: 0px;
   padding: 5px;
   border-radius: 3px;
-  background-color: skyblue;
+  background-color: rgb(20, 222, 151);
   margin-top: 25px;
   width: 90%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
