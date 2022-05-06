@@ -1,0 +1,32 @@
+.queryWrapper {
+  border: black 2px solid;
+  border-radius: 8px;
+  padding: 5px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.dataWrapper {
+  border-radius: 8px;
+  background-color: rgb(248, 9, 9);
+  padding: 5px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.dataCellLabel {
+  text-align: center;
+  padding: 5px;
+  font-weight: 700;
+}
+
+.dataCell {
+  text-align: center;
+  padding: 5px;
+}
+
+.footer {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
